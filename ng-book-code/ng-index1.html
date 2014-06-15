@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Simple app</title>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap-theme.min.css">
+    <script src="../js/angular/angular.min.js" ></script>
+    <script src="js/contr_1.js" ></script>
+</head>
+<body>
+    <div ng-controller='FirstController'>
+        <h4>Simplest adding machine ever</h4>
+        <button ng-click="add(1)" class="button">Add</button>
+        <a ng-click="subtract(1)" class="button alert">Subtract</a>
+        <h4>Current count: {{ counter }}</h4>
+    </div>
+    <div ng-controller="MyController">
+        <h1>{{ person }}</h1>
+        name:
+        <h2>{{ person.name }}</h2>
+    </div>
+
+    <div ng-controller="ParentController">
+        <div ng-controller="ChildController">
+            <a ng-click="sayHello()">Say Hello</a>
+        </div>
+        {{ person }}
+    </div>
+
+    <div ng-controller="MyexprController">
+        <input ng-model="expr"
+                type="text"
+                placeholder="Enter an expression"/>
+        <h2>{{ parsedValue }}</h2>
+    </div>
+
+</body>
+</html>
